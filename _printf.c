@@ -32,12 +32,9 @@ int _printf( const char *format, ...)
 		else
 		{
 			_putchar (format[i]);
+			l++;
 		}
 		i++;
-	}
-	while (format[l] != '\0')
-	{
-		l++;
 	}
 	va_end(ptr);
 	return (l);
