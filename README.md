@@ -1,2 +1,2 @@
 Hello, dear reader!
-Have a good day...
+Have a good day people
