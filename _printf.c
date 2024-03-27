@@ -27,16 +27,6 @@ int _printf( const char *format, ...)
 			ps();
 			i+=1;
 		}
-		else if(format[i] == '%' && format[i+1] == 'd')
-		{
-			pd();
-			i+=1;
-		}
-		else if(format[i] == '%' && format[i+1] == 'i')
-		{
-			pi();
-			i+=1;
-		}
 		else
 		{
 			_putchar (format[i]);
