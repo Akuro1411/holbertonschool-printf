@@ -15,5 +15,6 @@ void ps(){
 	{
 		_putchar(str[j]);
 		j++;
+		l++;
 	}       	 
 }
