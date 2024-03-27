@@ -6,10 +6,10 @@
  */
 int _printf( const char *format, ...)
 {
-	va_start(ptr, format);
 	int i = 0;
 	int l = 0;
 
+	va_start(ptr, format);
 	while (format[i] != '\0')
 	{
 		if(format[i] == '%' && format[i+1] == '%' )
