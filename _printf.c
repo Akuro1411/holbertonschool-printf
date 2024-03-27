@@ -7,7 +7,6 @@
 int _printf( const char *format, ...)
 {
 	int i = 0;
-	int l = 0;
 
 	va_start(ptr, format);
 	while (format[i] != '\0')
@@ -16,11 +15,13 @@ int _printf( const char *format, ...)
 		{
 			_putchar ('%');
 			i+=1;
+			l++;
 		}
 		else if(format[i] == '%' && format[i+1] == 'c')
 		{
 			pc();
 			i+=1;
+			l++;
 		}
 		else if(format[i] == '%' && format[i+1] == 's')
 		{

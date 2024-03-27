@@ -14,6 +14,7 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int l = 0;
 va_list ptr;
 void pd();
 void pi();
