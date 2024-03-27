@@ -10,6 +10,8 @@ int _printf( const char *format, ...)
 	l = 0;
 
 	va_start(ptr, format);
+	if (format[0] == '%' && format[1] == '\0')
+		return (0);
 	while (format[i] != '\0')
 	{
 		if(format[i] == '%' && format[i+1] == '%' )
