@@ -7,6 +7,7 @@
 int _printf( const char *format, ...)
 {
 	int i = 0;
+	l = 0;
 
 	va_start(ptr, format);
 	while (format[i] != '\0')
