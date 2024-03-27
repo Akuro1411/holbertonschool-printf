@@ -3,12 +3,12 @@
  * ps - Prints string
  * Return: number of characters printed
  */
-void ps(){
+void ps(void)
+{
 	int j = 0;
-        char *str;
+	char *str;
 
-     	str = va_arg(ptr, char *);
-
+	str = va_arg(ptr, char *);
 	if (str == NULL)
 		str = "(null)";
 	while (str[j] != '\0')
@@ -16,5 +16,5 @@ void ps(){
 		_putchar(str[j]);
 		j++;
 		l++;
-	}       	 
+	}
 }
