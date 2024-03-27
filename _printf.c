@@ -4,32 +4,32 @@
  * @format: format
  * Return: Number of printed characters excluding the null
  */
-int _printf( const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i = 0;
-	l = 0;
 
+	l = 0;
 	va_start(ptr, format);
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 	while (format[i] != '\0')
 	{
-		if(format[i] == '%' && format[i+1] == '%' )
+		if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar ('%');
-			i+=1;
+			i += 1;
 			l++;
 		}
-		else if(format[i] == '%' && format[i+1] == 'c')
+		else if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			pc();
-			i+=1;
+			i += 1;
 			l++;
 		}
-		else if(format[i] == '%' && format[i+1] == 's')
+		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			ps();
-			i+=1;
+			i += 1;
 		}
 		else
 		{
