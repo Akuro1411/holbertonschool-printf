@@ -10,7 +10,7 @@ int print_num(int len, va_list arg)
 	int64_t a;
 
 	a = va_arg(arg, int);
-	if (a < 0)
+	if (a <= 0)
 	{
 		len++;
 	}
