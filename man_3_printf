@@ -1,0 +1,73 @@
+#!/bin/bash
+echo ".\" Manual Page for _printf
+.TH PRINTF 3 "2023-03-29" "Version 1.0"
+
+.SH NAME
+_printf \- produces output according to a format
+
+.SH SYNOPSIS
+\fBinclude "main.h"\fR
+.br
+\fBint _printf(const char *format, ...);\fR
+
+.SH DESCRIPTION
+Produces output according to a format.
+.br
+In case of misused type function will return error.
+
+.SH RETURN VALUE
+Returns the length of output.
+
+.SH FORMATS
+Formats of _printf function:
+
+.TP
+\fB%c\fR
+Char argument's flag.
+
+.TP
+\fB%s\fR
+String argument's flag.
+
+.TP
+\fB%i\fR
+Integer argument's flag.
+
+.TP
+\fB%d\fR
+Decimal argument's flag.
+
+.TP
+\fB%%\fR
+Prints '%'
+
+.SH EXAMPLE
+.P
+\fB_printf("Let\'s print %c simple %s.", 'a' "text");
+.P
+Output: \fBLet's print a simple text.\fR
+.P
+Return: 25
+
+.SH REPORTING BUGS
+Contact with Authors
+
+.SH AUTHORS
+Nahid Isayev
+.br
+Kamran Qureyshi
+
+.SH COPYRIGHT
+Free to use.
+
+.SH SEE ALSO
+man _putchar.c
+.br
+man print_char.c
+.br
+man print_str.c
+.br
+man print_d.c" > man_3_printf.1
+mv man_3_printf.1 /usr/local/man/man1/
+gzip -f /usr/local/man/man1/man_3_printf.1
+man man_3_printf
