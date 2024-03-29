@@ -7,9 +7,8 @@
 #include <limits.h>
 #include <stdint.h>
 #include <inttypes.h>
- 
 int _printf(const char *format, ...);
-int _putchar(char c); 
+int _putchar(char c);
 int print_num(int len, va_list arg);
 int print(int64_t a);
 int count(int n);
