@@ -31,7 +31,7 @@ int count(int n)
 	int l = 1;
 
 	if (n == 0)
-		return (1);
+		return (0);
 	else
 		return  (l + count(n / 10));
 }
