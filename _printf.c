@@ -2,13 +2,14 @@
 /**
  * _printf - function printf selector
  * @format: format
- * Return: Number of printed characters excluding the null
+ * Return: Number of printed characters(excluding the null) or numbers.
  */
 int _printf(const char *format, ...)
 {
+	va_list ptr;
 	int i = 0;
+	int l = 0;
 
-	l = 0;
 	va_start(ptr, format);
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
@@ -22,23 +23,22 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			pc();
+			l += pc(ptr);
 			i += 1;
-			l++;
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			ps();
+			l = ps(l, ptr);
 			i += 1;
 		}
-		if (format[i] == '%' && format[i + 1] == 'd')
+		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			print_number(va_arg(ptr, int));
-			i++;
+			l = print_num(l, ptr);
+			i += 1;
 		}
 		else
 		{
-			_putchar (format[i]);
+			_putchar(format[i]);
 			l++;
 		}
 		i++;
